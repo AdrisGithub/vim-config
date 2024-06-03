@@ -83,6 +83,7 @@
     end
   '';
   plugins = {
+    oil.enable = true;
     telescope = {
       enable = true;
       settings = {
@@ -109,7 +110,7 @@
           };
         };
         keymaps = {
-          "<Tab><Tab>" = {
+          "<Tab>" = {
             mode = [ "n" "v" ];
             action = ''function() require("telescope.builtin").find_files() end'';
             options = {
