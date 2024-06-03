@@ -1,4 +1,4 @@
-{
+{helpers,...}:{
   # Import all your configuration modules here
   imports = [ ./bufferline.nix ];
 
@@ -116,8 +116,7 @@ keymaps = [
 {
         key = "<Tab><Tab>";
         mode = [ "n" "v" ];
-        action.__raw = ''function() require("telescope.builtin").find_files() end'';
-        lua = true;
+        action = helpers.mkRaw ''function() require("telescope.builtin").find_files() end'';
         options = {
           silent = true;
           desc = "Find Files";
