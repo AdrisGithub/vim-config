@@ -109,16 +109,6 @@
             preview_cutoff = 120;
           };
         };
-        keymaps = {
-          "<leader>f" = {
-            mode = [ "n" "v" ];
-            action = ''function() require("telescope.builtin").find_files() end'';
-            options = {
-              silent = true;
-              desc = "Find Files";
-            };
-          };
-        };
       };
     };
 };    
@@ -126,7 +116,7 @@ keymaps = [
 {
         key = "<Tab><Tab>";
         mode = [ "n" "v" ];
-        action = ''function() require("telescope.builtin").find_files() end'';
+        action.__raw = ''function() require("telescope.builtin").find_files() end'';
         lua = true;
         options = {
           silent = true;
