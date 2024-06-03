@@ -82,4 +82,43 @@
       return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
     end
   '';
+  plugins = {
+    telescope = {
+      enable = true;
+      settings = {
+        pickers.colorscheme.enable_preview = true;
+        defaults = {
+          file_ignore_patterns = [ "node_modules" ];
+          prompt_prefix = " ";
+          selection_caret = "❯ ";
+          path_display = [
+            "truncate"
+          ];
+          sorting_strategy = "ascending";
+          layout_config = {
+            horizontal = {
+              prompt_position = "top";
+              preview_width = 0.55;
+            };
+            vertical = {
+              mirror = false;
+            };
+            width = 0.87;
+            height = 0.80;
+            preview_cutoff = 120;
+          };
+        };
+        keymaps = {
+          "<Tab><Tab>" = {
+            mode = [ "n" "v" ];
+            action = ''function() require("telescope.builtin").find_files() end'';
+            options = {
+              silent = true;
+              desc = "Find Files";
+            };
+          };
+        };
+      };
+    };
+  };
 }
