@@ -110,7 +110,7 @@
           };
         };
         keymaps = {
-          "<Tab>" = {
+          "<leader>f" = {
             mode = [ "n" "v" ];
             action = ''function() require("telescope.builtin").find_files() end'';
             options = {
@@ -121,5 +121,17 @@
         };
       };
     };
-  };
+};    
+keymaps = [
+{
+        key = "<Tab><Tab>";
+        mode = [ "n" "v" ];
+        action = ''function() require("telescope.builtin").find_files() end'';
+        lua = true;
+        options = {
+          silent = true;
+          desc = "Find Files";
+        };
+      }
+      ];
 }
