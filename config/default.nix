@@ -1,4 +1,4 @@
-{helpers,...}:{
+{ helpers, ... }: {
   # Import all your configuration modules here
   imports = [ ./bufferline.nix ];
 
@@ -111,16 +111,16 @@
         };
       };
     };
-};    
-keymaps = [
-{
-        key = "<Tab><Tab>";
-        mode = [ "n" "v" ];
-        action = helpers.mkRaw ''function() require("telescope.builtin").find_files() end'';
-        options = {
-          silent = true;
-          desc = "Find Files";
-        };
-      }
-      ];
+  };
+  keymaps = [
+    {
+      key = "<Tab><Tab>";
+      mode = [ "n" "v" ];
+      action = helpers.mkRaw ''function() require("telescope.builtin").find_files() end'';
+      options = {
+        silent = true;
+        desc = "Find Files";
+      };
+    }
+  ];
 }
