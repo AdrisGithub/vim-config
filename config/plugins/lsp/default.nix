@@ -3,6 +3,9 @@
     ./rust.nix
     ./nix.nix
   ];
+
+  plugins.lsp.enable = true;
+
   keymaps = [
     {
       key = "<Space>";
