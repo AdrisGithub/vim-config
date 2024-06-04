@@ -3,11 +3,11 @@
   imports = [ ./bufferline.nix ];
 
   colorschemes.catppuccin.enable = true;
+  
   plugins.lsp = {
     enable = true;
     servers = {
       nil-ls.enable = true;
-      #	rust-analyzer.enable = true;
       rust-analyzer = {
         enable = true;
         installCargo = false;
@@ -19,6 +19,7 @@
 
     };
   };
+   
   plugins.cmp = {
     enable = true;
     autoEnableSources = true;
@@ -120,6 +121,15 @@
       options = {
         silent = true;
         desc = "Find Files";
+      };
+    }
+    {
+      key = "<Space>";
+      mode = [ "n" "v"];
+      action = helpers.mkRaw ''function() require("vim.lsp.buf").declaration() end'';
+      options = {
+       silent = true;
+       desc = "Goto Declaration";
       };
     }
   ];
