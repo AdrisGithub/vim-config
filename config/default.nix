@@ -10,8 +10,8 @@
       #	rust-analyzer.enable = true;
       rust-analyzer = {
         enable = true;
-        installCargo = true;
-        installRustc = true;
+        installCargo = false;
+        installRustc = false;
         settings = {
           check.command = "check";
         };
