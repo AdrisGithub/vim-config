@@ -1,6 +1,6 @@
 {
   imports = [
-    ./floatterm.nix
+    ./floaterm.nix
     ./transparent.nix
     ./bufferline.nix
     ./cmp.nix

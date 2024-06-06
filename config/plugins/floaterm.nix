@@ -1,5 +1,5 @@
 {
-  plugins.floatterm = {
+  plugins.floaterm = {
     enable = true;
     autoclose = 0;
   };
