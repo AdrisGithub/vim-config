@@ -6,6 +6,5 @@
       ./clipboard.nix
       ./color.nix
     ];
-
 }
 

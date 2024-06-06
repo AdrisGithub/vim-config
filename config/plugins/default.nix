@@ -1,5 +1,7 @@
 {
   imports = [
+    ./floatterm.nix
+    ./transparent.nix
     ./bufferline.nix
     ./cmp.nix
     ./lsp
