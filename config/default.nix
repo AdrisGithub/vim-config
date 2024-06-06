@@ -3,6 +3,7 @@
   imports =
     [
       ./plugins
+      ./clipboard.nix
       ./color.nix
     ];
 
