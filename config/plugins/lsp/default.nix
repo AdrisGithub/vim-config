@@ -4,8 +4,14 @@
     ./nix.nix
   ];
 
-  plugins.lsp.enable = true;
-
+  plugins = {
+    lsp.enable = true;
+    lsp-lines = {
+      enable = true;
+      currentLine = true;
+    };
+    lsp-format.enable = true;
+  };
   keymaps = [
     {
       key = "<Space>";
