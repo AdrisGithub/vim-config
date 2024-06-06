@@ -1,7 +1,7 @@
 {
   imports = [
-./toggleterm.nix    
-./transparent.nix
+    ./toggleterm.nix
+    ./transparent.nix
     ./bufferline.nix
     ./cmp.nix
     ./lsp
