@@ -6,5 +6,6 @@
       ./clipboard.nix
       ./color.nix
     ];
+  diagnostics.virtual_lines.only_current_line = true;
 }
 

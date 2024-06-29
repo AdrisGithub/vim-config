@@ -8,7 +8,8 @@
     lsp.enable = true;
     lsp-lines = {
       enable = true;
-      currentLine = true;
+      # Has been renamed to diagnostics.virtual_lines.only_current_line
+      #      currentLine = true;
     };
     lsp-format.enable = true;
   };
