@@ -2,6 +2,7 @@
   imports = [
     ./rust.nix
     ./nix.nix
+    ./java.nix
   ];
 
   plugins = {
